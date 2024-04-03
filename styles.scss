@@ -1,0 +1,188 @@
+$veryDarkGrayishBlue: hsl(217, 19%, 35%);
+$desaturatedDarkBlue: hsl(214, 17%, 51%);
+$grayishBlue: hsl(212, 23%, 69%);
+$lightGrayishBlue: hsl(210, 46%, 95%);
+
+body {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $lightGrayishBlue;
+    font-family: "Manrope", sans-serif;
+
+    main {
+
+        margin-top: 5rem;
+        width: min(95%, 375px);
+        height: 512px;
+        background-color: white;
+        
+
+        img {
+            width: 100%;
+            height: 200px;
+        }
+
+        article {
+
+            padding: 0 3.5rem;
+
+            h1 {
+                color: $veryDarkGrayishBlue;  
+                font-size: 1rem; 
+                margin-top: 2rem;
+            }
+
+            p {
+                color: $desaturatedDarkBlue;
+                font-size: 0.813rem;
+                line-height: 20px;
+                letter-spacing: 0.12px;
+                margin-top: 1rem;
+            }
+
+            .defaultShare {
+
+                display: none;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 2rem;
+
+                img {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                }
+
+                .name {
+                    color: $veryDarkGrayishBlue;
+
+                }
+
+                .date {
+                    color: $desaturatedDarkBlue;
+                }
+
+                button {
+
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 50%;
+                    border: 0;
+                }
+            }
+
+            .share3 {
+                display: none;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-around;
+                width: 248px;
+                height: 60px;
+                position: absolute;
+                top: 9rem;
+                left: 16.5rem;
+                z-index: 100;
+                background-color: $veryDarkGrayishBlue;
+                border-radius: 1rem;
+                color: white;
+
+                .triangle {
+                    width: 0;
+                    height: 0;
+                    border-left: 12px solid transparent;
+                    border-right: 12px solid transparent;
+                    border-top: 24px solid $veryDarkGrayishBlue;
+                    position: absolute;
+                    top: 3.5rem;
+                    left: 7rem;
+
+                }
+            }
+
+
+        }
+
+        .share2 {
+            display: none;
+            align-items: center;
+            justify-content: space-around;
+            background-color: $veryDarkGrayishBlue;
+            height: 64px;
+            margin-top: 3rem;
+            color: $grayishBlue;
+
+            .fa-brands {
+
+                color: white;
+                margin: 0 -3rem;
+            }
+
+
+
+            button {
+                width: 32px;
+                height: 32px;
+                border-radius: 50%;
+                border: 0;
+
+            }
+            
+        }
+    }
+
+    @media screen and (min-width: 1440px) {
+
+        main {
+
+            width: 730px;
+            height: 280px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            margin-top: 16rem;
+            
+
+            img {
+
+                height: 280px;
+                width: 285px;
+            }
+
+            article {
+
+                padding: 2rem 2.5rem;
+                z-index: 1;
+                position: relative;
+
+                h1 {
+                    font-size: 1.25rem;
+                }
+
+                .defaultShare {
+                    margin-top: -1rem;
+
+                    .name {
+
+                        position: relative;
+                        right: 5rem;
+                    }
+                }
+
+                .share2 {
+                    position: absolute;
+                    right: 53rem;
+                    z-index: 100;
+                    border: 1px solid black;
+                    width: 248px;
+                    height: 67px;
+                }
+            }
+        }
+        
+    }
+}
